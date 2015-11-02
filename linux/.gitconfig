@@ -1,0 +1,5 @@
+[user]
+	email = greg@synapse.com
+	name = Greg Strange
+[core]
+	editor = vim
