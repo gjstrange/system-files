@@ -105,6 +105,5 @@ fi
 alias e='vim'
 alias m='make'
 
-source ~/../juha.kuikka/.git-completion.bash
 export PS1='\h:\w\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
 
