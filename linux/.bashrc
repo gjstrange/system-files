@@ -104,6 +104,6 @@ fi
 
 alias e='vim'
 alias m='make'
+alias gitgraph='git log --oneline --decorate --all --graph'
 
 export PS1='\h:\w\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
-
