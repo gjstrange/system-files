@@ -104,6 +104,7 @@ fi
 
 alias e='gvim'
 alias m='make'
+alias gitgraph='git log --oneline --decorate --all --graph'
 
 source .git-completion.bash
 export PS1='\h:\w\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
@@ -118,4 +119,3 @@ export CROSS_COMPILE=/opt/gcc-arm-none-eabi-4_8-2014q3/bin/arm-none-eabi-
 #export ACORN_FRAMEWORK_PATH=/Users/greg/git/acorn-framework
 
 export DYLD_LIBRARY_PATH=/Users/greg/git/dap2/libs/libs
-
