@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source /opt/thecount/2.4.1/environment-setup-armv7ahf-neon-synapse-linux-gnueabi
+source /home/greg/go/src/github.disney.com/xOS/rex/setup-go-cross-compile.bash
+export GOPATH=/home/greg/go
+
+
+
