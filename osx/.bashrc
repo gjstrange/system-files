@@ -105,17 +105,30 @@ fi
 alias e='gvim'
 alias m='make'
 alias gitgraph='git log --oneline --decorate --all --graph'
-
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+#
 source .git-completion.bash
+
 export PS1='\h:\w\[\033[32m\]$(__git_ps1) \[\033[0m\]$ '
 
-# export PATH=$HOME/bin:/usr/local/git/bin:$PATH:/opt/gcc-arm-none-eabi-4_7-2013q1/bin
-export PATH=$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/bin:$(brew --prefix ctags)/bin::/usr/local/git/bin:$PATH:/opt/gcc-arm-none-eabi-4_8-2014q3/bin:/usr/local/sbin
-#MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+# 'brew --prefix' will give the right prefixes for these but is very slow, so we've hardcoded the answers
+
+#export PATH=$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/bin:$(brew --prefix ctags)/bin::/usr/local/git/bin:$PATH:/usr/local/sbin:/usr/local/go/bin
+export PATH=$HOME/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/bin:/usr/local/opt/ctags/bin::/usr/local/git/bin:$PATH:/usr/local/sbin:/usr/local/go/bin
+
+#export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:$MANPATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 export GIT_EDITOR=vi
-export CROSS_COMPILE=/opt/gcc-arm-none-eabi-4_8-2014q3/bin/arm-none-eabi-
+#export CROSS_COMPILE=/opt/gcc-arm-none-eabi-4_8-2014q3/bin/arm-none-eabi-
 #export ACORN_FRAMEWORK_PATH=/Users/greg/git/acorn-framework
 
-export DYLD_LIBRARY_PATH=/Users/greg/git/dap2/libs/libs
+#export DYLD_LIBRARY_PATH=/Users/greg/git/dap2/libs/libs
+
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/protoc-3.6.1-osx-x86_64/bin
+export PATH=$PATH:/Users/greg/Library/Python/3.7/bin
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
+
