@@ -1,14 +1,16 @@
+
+export PATH=$PATH:/opt/homebrew/bin
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#export PATH=$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/bin:$(brew --prefix ctags)/bin::/usr/local/git/bin:$PATH:/usr/local/sbin:/usr/local/go/bin
-#export PATH=$HOME/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/bin:/usr/local/opt/ctags/bin::/usr/local/git/bin:$PATH:/usr/local/sbin:/usr/local/go/bin
+export PATH=$PATH:$(brew --prefix macvim)/bin
 
-# Add /usr/local/opt/findutils/libexec/gnubin to use bnu findutils as default (from brew install findutils)
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/bin:/usr/local/opt/ctags/bin:$PATH
+# Add these paths to use the gnu programs as defaults rather than mac versions
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:$(brew --prefix ctags)/ctags/bin:$PATH
 
 # Links python, pip, etc. to homebrew installed python3.9
-export PATH=/usr/local/opt/python@3.9/libexec/bin:$PATH
+export PATH=$(brew --prefix python)/libexec/bin:$PATH
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/Applications/MacVim.app/Contents/bin
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
@@ -133,7 +135,8 @@ alias gitgraph='git log --oneline --decorate --all --graph'
 
 ## External plugins
 # https://github.com/zsh-users/zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $(brew --previs zsh-syntax-highlighting)/share/zsh-syntax-highlighting/zsh-synatx-highlighting.zsh
 
 
 # User configuration
@@ -142,4 +145,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #PROMPT=$'%(1V.(%1v).)%{$fg_bold[magenta]%}%n@%m %{$fg[blue]%}%D{[%X]} %{$reset_color%}%{$fg[magenta]%}[%2~]%{$reset_color%} $(git_prompt_info)\
 # %{$fg_bold[magenta]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
 
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+#export PATH=$(brew --prefix openssl)/bin:$PATH"
