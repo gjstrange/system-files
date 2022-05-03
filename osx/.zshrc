@@ -102,7 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-export GIT_EDITOR=vi
 #export LESS=-XF
 
 

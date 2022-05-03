@@ -3,7 +3,7 @@
 	email = greg@synapse.com
 [core]
 	excludesfile = /Users/greg/.gitignore_global
-	editor = vim
+    editor = gvim -f
 	pager = less -iXF
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
