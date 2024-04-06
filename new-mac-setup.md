@@ -16,11 +16,15 @@ These steps set up google Chrome, MacVim and iTerm
 
 - install dropbox
     - log into gregjstrange account
-- install keepassx
+- install [keepassxc](https://keepassxc.org/download/#macos)
 - install ticktick and login
 - install lightroom classic
 - install photoshop
-- copy lightroom dictionary and check that lightroom works
+- copy lightroom catalog and check that lightroom works
+
+## Personal Computer only
+
+- install Microsoft 365
 
 ## work stuff
 
